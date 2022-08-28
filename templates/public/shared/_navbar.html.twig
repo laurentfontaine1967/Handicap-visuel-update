@@ -1,0 +1,21 @@
+<div class="container mt-5" >
+
+<button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Menu</button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Handicap Visuel</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body" style="display:flex;flex-direction:column;justify-content:space-between">
+
+    <a href="{{ path('index') }}"><i id="acceuil" class="fas fa-home "></i>Home</a>
+    <a href="{{ path('ladministratif') }}"><i id="adminis" class="fas fa-wheelchair"></i> Les administrations </a>
+    <a href="{{ path('commercant') }}"><i id="commerce" class="fas fa-eye-slash"></i>Commerçants</a>
+    <a href="{{ path('association') }}"> <i id="asso" class="fas fa-address-book"></i>Associations</a> 				
+    <a href="{{ path('news') }}">	<i id="news" class="fas fa-rss-square"></i>New-actualites</a>
+    <a href="{{ path('show_articles') }}"><i id="tchat" class="fab fa-rocketchat"></i>Echanges</a>
+    <a href="{{ path('braille') }}"> <i id="braille" class="fas fa-braille"></i>Le braille</a> 
+  </div>
+</div>
+</div>

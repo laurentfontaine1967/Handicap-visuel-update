@@ -1,0 +1,55 @@
+.offcanvas-body a{
+
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+  text-decoration: none;
+  color:black;
+  margin-left: 10px;
+}
+
+.offcanvas-body i{
+  margin-right: 15px;
+}
+
+
+
+#adminis {
+    color: brown;
+  }
+  #commerce {
+    color: darkblue;
+  }
+  #news {
+    color: darkorange;
+  }
+  #tchat {
+    color: mediumvioletred;
+  }
+  
+  #braille {
+    color: seagreen;
+  }
+  
+  #asso {
+    color: teal;
+  }
+  
+  
+  #enregistre {
+    color: red;
+  }
+  
+  #myspace {
+    color: blueviolet;
+  }
+  
+  #acceuil {
+    color: green;
+  }
+  
+  /*------------------------------ RESPONSIVE ------------------------------------------*/
+  /* responsive petits ecrans---------------------------------------------------------- */
+  /* @media screen and (max-width: 450px) {
+    #navbarquery {
+      width: 100vw;
+    } */

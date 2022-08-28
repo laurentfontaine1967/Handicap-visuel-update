@@ -1,0 +1,124 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Voir les post
+{% endblock %}
+
+{% block body %}
+
+	<link rel="stylesheet" href="{{ asset('/css/showarticles.css') }}">
+
+	<body>
+		{% include "public/shared/_navbar.html.twig" %}
+		<div id="rowRegister" class="row">
+
+			<aside id="ou_intro_register" class="col-xl-3">
+
+				<div class="intro_register">
+
+					<div class="sigle">
+						<P id="icocon">
+							<i class="fas fa-user-check"></i>
+						</p>
+
+
+					</p>
+
+				</div>
+				<div class="infoRegister">
+					<h5 style="font-weight: bold">Mes Informations
+					</h5>
+					{% if app.user %}
+						<a>Bonjour,</a>
+						<a style="font-weight:bold">
+
+							{{ app.user.pseudo }}</a>
+					{% endif %}
+
+					<div class="session_stop">
+
+
+						{% if app.user %}
+							<a class=" btn btn-danger " aria-current="page" href="{{ path('app_logout') }}">
+								Se deconnecter</a>
+						{% endif %}
+
+						{% if app.user is same as null %}
+							<a class=" btn btn-info " aria-current="page" href="{{ path('app_login') }}">
+								Se connecter</a>
+						{% endif %}
+					</div>
+					<p>Voir mes informations
+					</p>
+					<p>
+						-Votre adresse mail ne sera pas modifiable.
+
+					</p>
+					<p>
+						-Votre pseudo ne sera pas modifable.
+					</p>
+
+				</div>
+
+
+				<img class="creat_account" src="{{ asset('images/forum.jpg') }}" alt="s'enregistrer"></img>
+
+
+			<div class="join">
+
+
+				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
+			</div>
+		</div>
+	</body>
+</aside>
+<aside id="content" class="col-xl-9">
+	<div class="content_register">
+
+		<div class="row">
+			{% include "public/shared/_messages_flash.html.twig" %}
+		</div>
+
+		<div class="col-12">
+			<div class="table-responsive">
+				<h3 class="showart" style=" font-weight: bold">Mes informations personelles
+				</h3>
+
+
+				<div class="d-flex align-items-center justify-content-between">
+
+
+					<div class="card-body">
+						<div class="table-responsive">
+
+							<table class="table table-hover">
+
+								<thead class="tete">
+									<th>Pseudo</th>
+									<th>mail</th>
+									<th>mot de passe</th>
+
+								</thead>
+								<tbody>
+
+									<tr>
+										<td>{{ user.pseudo }}</td>
+										<td>{{ user.email  }}</td>
+
+										<td>
+											<a class="btn btn-sm btn-danger mt-3" href=" {{ path('app_forgot_password_request') }}">Modifier</a>
+
+
+										</td>
+									</tr>
+
+								</tbody>
+
+
+							</table>
+
+						</div>
+					</div>
+				</div>
+			</aside>
+			{% include "public/shared/_footer.html.twig" %}</body>
+	{% endblock %}

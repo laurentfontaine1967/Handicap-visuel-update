@@ -1,0 +1,21 @@
+{% apply inline_css %}
+<style>
+	{
+		# here, define your CSS styles as usual #
+	}
+
+	.divText {
+		text-align: center;
+	}
+</style>
+
+
+{% endapply %}
+<div class="divText">
+	<h6>
+		Bonjour,
+	</h6>
+
+
+	<p>Votre message</p>
+	<p>{{message|raw}}</p>
