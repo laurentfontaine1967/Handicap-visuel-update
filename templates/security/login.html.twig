@@ -1,59 +1,20 @@
-{% extends 'base.html.twig' %}
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+Se connecter 
+</button>
 
-{% block title %}Se connecter
-{% endblock %}
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+ <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Se connecter</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      
 
-{% block body %}
-
-	<link rel="stylesheet" href="{{ asset('/css/loggin.css') }}">
-
-	<body>
-		{% include "public/shared/_navbar.html.twig" %}
-		<div id="rowRegister" class="row">
-
-			<aside id="ou_intro_register" class="col-xl-3">
-
-				<div class="intro_register">
-
-					<div class="sigle">
-						<P id="icoco">
-							<i class="fas fa-user-check"></i>
-						</p>
-
-
-					</p>
-
-				</div>
-				<div class="infoRegister">
-					<h5 style="font-weight:bold">Se connecter
-					</h5>
-
-
-					<p>
-
-						Se connecter à son espace personnel:
-					</p>
-					<p>
-						-créer ses Posts :partager son expérience.</p>
-					<p>
-						-contacter d'autres membres afin de les aider</p>
-
-
-				</div>
-
-				<img class="creat_account" src="{{ asset('images/register.png') }}" alt="s'enregistrer"></img>
-
-
-			<div class="join">
-
-
-				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
-			</div>
-		</div>
-	</body>
-</aside>
-<aside id="content" class="col-xl-9">
-	<div class="content_register">
+<div class="content_register">
 		<form method="post">
 
 
@@ -62,9 +23,7 @@
 			{% endif %}
 
 
-			<div class="mb-6" id="regis">
-
-				<h5 style="font-weight:bold">Entrer vos identifiants</h5>
+			
 
 				<div class="form-group">
 
@@ -75,21 +34,19 @@
 
 					<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-					<button id="btonval" class="btn btn-primary" type="submit">
-						<i style="padding: 10px" class="fas fa-sign-in-alt"></i>se connecter
-					</button>
-
+					<button  class="btn btn-primary mt-3"  style="align-item:center" type="submit">valider</button>
 
 				</form>
 
-				<a href="{{ path('app_forgot_password_request') }}" id="mdpoubli" class="btn btn-danger">mot de passe Oublié ?</a>
-
-			</div>
-
-
-		</form>
-
-
+	
 	</div>
 
-</aside></div>{% include "public/shared/_footer.html.twig" %}</body>{% endblock %}
+
+      </div>
+      <div class="modal-footer">
+        <a href="{{ path('app_forgot_password_request') }}" >Mot de passe oublie </a>
+       
+      </div>
+    </div>
+  </div>
+</div>

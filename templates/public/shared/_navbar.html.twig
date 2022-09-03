@@ -1,6 +1,24 @@
 <div class="container mt-5" >
+<div style="display:flex;flex-direction:row;">
+<button class="btn btn-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling"><i class="fa-solid fa-bars"></i></button>
 
-<button class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Menu</button>
+{% if app.user is same as null %}
+
+<div style="padding:5px">
+{{ render(path('register')) }}
+</div>
+<div style="padding:5px">
+{{ render(path('app_login')) }}
+</div>
+</div>
+
+{# <a class="btn btn-dark" href="{{ path('register') }}" >Creer un compte</a> #}
+{# <a class="btn btn-dark"  href="{{ path('app_login') }}">Se connecter</a> #}
+
+
+{% endif %}
+
+
 
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
   <div class="offcanvas-header">

@@ -2,15 +2,15 @@
 
 
 {% block body %}
-	<link rel="stylesheet" href="{{ asset('/css/administratif.css') }}">
+
 	{% include "public/shared/_navbar.html.twig" %}
 <div class="container mt-5">
 
     <div class="row " >
       <div class="col-sm mx-5" style="border:solid 1px black; border-radius:5px;">
-	  <p style="text-align:center;font-size:40px;padding:10px" class="mt-2"><i id="adminis" class="fas fa-wheelchair"></i></p>
+	  <p style="text-align:center;font-size:30px;padding:10px;color:red" class="mt-2"><a class = "btn btn-primary btn-sm" href="https://fmh-association.org/services-2/ma-mdph/" target="_blank"> Trouver la MDPH de votre département</a></p>
      
-     <p style="font-weight:bold;text-align:center">35% des personnes handicapées et leurs aidants jugent les démarches administratives assez, voire très complexes.Force est de constater les difficultés réelles auxquelles sont encore confrontées de nombreuses personnes en situation de handicap pour faire valoir leurs droits, du fait de la complexité des démarches et de la lenteur des circuits administratifs.</p>
+     <p style="text-align:center;font-size:25px;padding:10px">35% des personnes handicapées et leurs aidants jugent les démarches administratives assez, voire très complexes.Force est de constater les difficultés réelles auxquelles sont encore confrontées de nombreuses personnes en situation de handicap pour faire valoir leurs droits, du fait de la complexité des démarches et de la lenteur des circuits administratifs.</p>
 
       </div>
 
@@ -19,33 +19,39 @@
 
     <div class="row">
      <div class="col-sm mx-5  mt-5 " style="border:solid 1px black; border-radius:5px">
-      <h2 style="font-weight:bold"> Documents neccessaires pour deposer un dossier a la MDPH</h2>
+      <h2 style="font-weight:bold;padding:10px"> Documents neccessaires pour deposer un dossier a la MDPH</h2>
        
-          <p >
-		  </p>
-        <p> </p>
+       <p style="font-size:20px">Formulaire unique de demande CERFA :
+						<span>
+							<a class="btn btn-info" href="https://www.essonne.fr/fileadmin/2-sante-social-solidarite/handicap/MDPHE-formulairededemande.pdf" target="_blank">Formulaire</a>
+						</span>
+					</p>
+					<p style="font-size:20px">Un certificat médical (Cerfa) datant de moins de 3 mois, rempli, daté et signé par votre médecin (avec son cachet):
+						<span>
+							<a class="btn btn-info" href="https://www.essonne.fr/fileadmin/2-sante-social-solidarite/handicap/cerfa_15695-01.pdf" target="_blank">Certificat</a>
+						</span>
+					</p>
+					<p style="font-size:20px">Compte rendu type pour un bilan auditif à joindre au certificat médical<span>
+							<a class="btn btn-info" href="https://www.essonne.fr/fileadmin/2-sante-social-solidarite/handicap/BILAN-AUDITIF.pdf">
+								Document a telecharger</a>
+						</span>
+					</p>
+					<p style="font-size:20px">Compte rendu type pour un bilan ophtalmologique
+						<span>
+							<a class="btn btn-info" href="https://www.essonne.fr/fileadmin/2-sante-social-solidarite/handicap/BILAN-OPHTALMOLOGIQUE.pdf" target="_blank">
+								Document a telecharger
+							</a>
+						</span>
+					</p>
+				</p>
+				<p style="font-size:20px">Un justificatif d’identité (photocopie) en cours de validité, et un justificatif de domicile (photocopie)
+				</p>
        
 
       </div>
 
 </div>
 
-    
-	{# <div class="row">
-   <div class="col">L</div>
-   <div class="col">L</div>
-     </div>
-
-   <div class="row">
-   <div class="col">L</div>
-   <div class="col">L</div>
-    </div> #}
-
-	
-	
-	
-		
-
-
+ 
 	
 {% endblock %}
