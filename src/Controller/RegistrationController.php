@@ -12,9 +12,12 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
 class RegistrationController extends AbstractController
 {
-    /**
+     /**
      * @Route("/register", name="register")
      */
+     
+    
+    
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
         $user = new User();
@@ -26,9 +29,10 @@ class RegistrationController extends AbstractController
             $user->setPassword(
                 $passwordEncoder->encodePassword(
                     $user,
-                    $form->get('plainPassword')->getData()
+                    $form->get('password')->getData()
                 )
             );
+            
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);
@@ -38,7 +42,8 @@ class RegistrationController extends AbstractController
             return $this->redirectToRoute('app_login');
         }
 
-        return $this->render('registration/modalregister.html.twig', [
+         return $this->render('registration/register.html.twig', [
+
             'registrationForm' => $form->createView(),
         ]);
     }

@@ -3,9 +3,10 @@
 
 {% block body %}
 
-	{% include "public/shared/_navbar.html.twig" %}
+	{% include "public/shared/_side.html.twig" %}
+	
 <div class="container mt-5 pb-5">
-
+{% include "public/shared/modal.html.twig" %}
     <div class="row " >
       <div class="col-sm mx-5" style="border:solid 1px black; border-radius:5px;">
 	 
@@ -28,19 +29,19 @@
 
 						
 <p>Il y a 6 points dans une cellule braille.Savoir où se situent les points et les espaces.</p>
-<img src="{{ asset('images/ETAPE1.PNG') }}" alt="etape1">							
+<img src="{{ asset('images/ETAPE1.PNG') }}"style="max-width:8%" alt="etape1">							
 							
 <p>Les lettres de A a J.Ces lettres n'utilisent que les 4 points supérieurs sur les 6 de la cellule.</p>					
-<img src="{{ asset('images/ETAPE2.PNG') }}" alt="etape2">
+<img src="{{ asset('images/ETAPE2.PNG') }}"style="max-width:20%" alt="etape2">
 							
 <p>Les lettres de K a T.Elles sont identiques aux lettres A à J, sauf qu'elles possèdent un point additionnel en position 3.</p>							
-<img src="{{ asset('images/ETAPE3.PNG') }}" alt="etape3">						
+<img src="{{ asset('images/ETAPE3.PNG') }}" style="max-width:20%"alt="etape3">						
 					
 <p>Les lettres U, V, X, Y et Z.Ce sont les mêmes que les lettres A à E, sauf qu'elles ont un point supplémentaire en positions 1 , 3 et 6.	</p>						
-<img src="{{ asset('images/ETAPE4.PNG') }}" alt="etape4">						
+<img src="{{ asset('images/ETAPE4.PNG') }}"style="max-width:20%" alt="etape4">						
 						
 <p>	Le W, ne suit pas ce schéma. Car le braille a été écrit à l'origine pour le Français, qui a l'époque ne contenait pas de W.	</p>					
-<img src="{{ asset('images/ETAPE5.PNG') }}" alt="etape5">						
+<img src="{{ asset('images/ETAPE5.PNG') }}"style="max-width:5%" alt="etape5">						
 							
 
 </div>

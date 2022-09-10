@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Controller;
-
-
-
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+
+
 
 class HomeController extends AbstractController
 {
@@ -18,4 +17,5 @@ class HomeController extends AbstractController
 
         return $this->render('/public/home.html.twig');
     }
+
 }

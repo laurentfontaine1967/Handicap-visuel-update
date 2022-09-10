@@ -1,0 +1,47 @@
+
+{% extends "base.html.twig" %}
+
+{% block body %}
+ {% include "public/shared/_side.html.twig" %} 
+
+<div class="container mt-5">
+<
+<h3 style="text-align:center">Creer un compte</h3>
+<div class="row">
+
+ <div class="col-sm mx-5 mt-5 " style="border:solid 1px black; border-radius:5px;padding:30px">
+ 
+ {{ form_start(registrationForm)}}
+     {% include "public/shared/_messages_flash.html.twig" %}
+
+			<div class="form-group" style="padding:10px">
+				{{ form_row(registrationForm.pseudo) }}
+			</div>
+			<div class="form-group mt-2" style="padding:10px">
+				{{ form_row(registrationForm.email) }}
+			</div>
+			<div class="form-group mt-2" style="padding:10px">
+				{{ form_row(registrationForm.password)}}
+			</div>
+<div  style="text-align:center">
+	  <button type="submit" class="btn btn-primary" >S'enregister</button>
+    </div>
+  {{ form_end(registrationForm) }}
+ 
+ 
+ </div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+  
+{% endblock %}
+     
