@@ -29,7 +29,7 @@ class ShowMyArticlesController extends AbstractController
         $articles = $paginatorInterface->paginate(
             $data,
             $request->query->getInt('page', 1),
-            5
+            1
         );
 
 

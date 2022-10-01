@@ -4,81 +4,42 @@
 {% endblock %}
 
 {% block body %}
-
-	<link rel="stylesheet" href="{{ asset('/css/showarticles.css') }}">
-
-	<body>
-		{% include "public/shared/_navbar.html.twig" %}
-		<div id="rowRegister" class="row">
-
-			<aside id="ou_intro_register" class="col-xl-3">
-
-				<div class="intro_register">
-
-					<div class="sigle">
-						<P id="icocon">
-							<i class="fas fa-user-check"></i>
-						</p>
+{% include "public/shared/_side.html.twig" %} 
+<div class="container mt-5" >
 
 
-					</p>
+<div class="row mb-3">
+   <div class="col-sm mx-4">
+    {% include "public/shared/_navbar.html.twig" %} 
+   </div>
+   
+     </div>
 
-				</div>
-				{% if app.user is same as null %}
-					<div class="info_role">
-						<a href="{{ path('app_login') }}" class=" btn btn-success">Me Connecter</a>
-						<a href="{{ path('register') }}" class="btn btn-info">M'inscrire</a>
-					</div>
-				{% endif %}
-
-
-				{% if app.user  %}
-
-					{% if app.user.roles[0] is same as "ROLE_USER" %}
-						<a>Bonjour,</a>
-						<a style="font-weight:bold">
-							{{ app.user.pseudo }}</a>
-						<div class="info_user">
-							<a class=" btn btn-success" aria-current="page" href="{{ path('auteur_home') }}">
-								Mon Espace</a>
-							<a class=" btn btn-danger " aria-current="page" href="{{ path('app_logout') }}">
-								Se deconnecter</a>
-						</div>
-					{% endif %}
-				{% endif %}
-				<div class="infoRegister">
-					<h5 style="font-weight:bold">Les Echanges
-					</h5>
+<h3 style="text-align:center" class="mt-2">Vos partages </h3>
 
 
-					<p>Les Post sont consultables par tous.
-																																																																																																																																																																																																												Seuls les membres inscrits peuvent contacter les personnes ayant postées.
-					</p>
-					<p>
+{% if app.user %}
+{% if app.user.roles[0] is same as "ROLE_USER" %}
+<div class="row mb-2">
 
-						Quand vous souhaitez contacter un pseudo, votre adresse mail ne sera pas communiquée.
-					</p>
-				</div>
-
-				<img class="creat_account" src="{{ asset('images/forum.jpg') }}" alt="s'enregistrer"></img>
+<div class="col-sm mx-5" style="padding:10px">
+ <a style="text-align:center"class="btn btn-light btn-sm" type="button" href="{{ path('auteur_home') }}" >Voir mes articles</a> 
+ <a style="text-align:center"class="btn btn-warning btn-sm" type="button" href="{{ path('create_article') }}" >Ecrire un article</a> 
 
 
-			<div class="join">
+</div>
+</div>
+{% endif %}
+{% endif %}
+</nav>	
 
 
-				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
-			</div>
-		</div>
-	</body>
-</aside>
-<aside id="content" class="col-xl-9">
-	<div class="content_register">
+<div class="row">
 
-		<div class="row">
-			{% include "public/shared/_messages_flash.html.twig" %}
-		</div>
-		<div class="table-responsive-sm">
-			<h3 class="showart" style="font-weight:bold">Vos partages ...</h3>
+{# {% include "public/shared/_messages_flash.html.twig" %} #}
+<div class="col-sm mx-5" style="border:solid 1px black; border-radius:5px;padding:10px">
+<div class="table-responsive-sm">
+			
 
 			{% if articles | length > 0 %}
 
@@ -129,5 +90,14 @@
 	</table>
 	{{ knp_pagination_render(articles) }}
 {% else %}
-	<p>Aucun article n'a encore été écrit!</p>
-{% endif %}</div></div></aside></div>{% include "public/shared/_footer.html.twig" %}</body>{% endblock %}
+	<p style="font-size:20px;text-align:center" class="mt-5">Aucun article n'a encore été écrit!</p>
+{% endif %}
+
+
+
+</div>
+		
+</div>
+</div>
+
+{% endblock %}

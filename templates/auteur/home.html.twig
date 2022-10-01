@@ -4,111 +4,34 @@
 {% endblock %}
 
 {% block body %}
+<link rel="stylesheet" href="{{ asset('/css/home.css') }}">
+{% include "public/shared/_side.html.twig" %} 
+<div class="container">
+<div class="row mb-4">
+   <div class="col-sm mx-4">
+    {% include "public/shared/_navbar.html.twig" %} 
+   </div>
+   
+     </div>
 
-	<link rel="stylesheet" href="{{ asset('/css/showarticles.css') }}">
-
-	<body>
-		{% include "public/shared/_navbar.html.twig" %}
-		<div id="rowRegister" class="row">
-
-			<aside id="ou_intro_register" class="col-xl-3">
-
-				<div class="intro_register">
-
-					<div class="sigle">
-						<P id="icocon">
-							<i class="fas fa-user-check"></i>
-						</p>
-
-
-					</p>
-
-				</div>
-				<div class="infoRegister">
-					<h5 style="font-weight: bold">Mes Echanges
-					</h5>
-					{% if app.user %}
-						<a>Bonjour,</a>
-						<a style="font-weight:bold">
-
-							{{ app.user.pseudo }}</a>
-					{% endif %}
-
-					<div class="session_stop">
-						{% if app.user %}
-							<a class="btn btn-primary" href="{{ path('create_article') }}">Creer un Post</a>
-						{% endif %}
-						{% if app.user %}
-							{% if app.user %}
-								<a class=" btn btn-danger " aria-current="page" href="{{ path('app_logout') }}">
-									Se deconnecter</a>
-							{% endif %}
-						{% endif %}
-						{% if app.user is same as null %}
-							<a class=" btn btn-info " aria-current="page" href="{{ path('app_login') }}">
-								Se connecter</a>
-						{% endif %}
-					</div>
-					<p>Cet espace vous permet de créer des Posts
-
-					</p>
-					<p>
-
-						Vous pouvez également les supprimer et les modifier.
-					</p>
-
-					<h5 style="font-weight: bold">Mes Informations
-					</h5>
-					<a class=" btn btn-info " aria-current="page" href="{{ path('mes-informations') }}">
-						Voir mes informations</a>
-
-				</div>
-
-
-				<img class="creat_account" src="{{ asset('images/forum.jpg') }}" alt="s'enregistrer"></img>
-
-
-			<div class="join">
-
-
-				<a href="mailto:laurentfontaine@gmail.com" class="btn btn-success">Contacter l'Administrateur</a>
-			</div>
-		</div>
-	</body>
-</body></aside><aside id="content" class="col-xl-9">
-<div class="content_register">
-
-	<div class="row">
-		{% include "public/shared/_messages_flash.html.twig" %}
-	</div>
-
-	<div class="col-12">
-		<div class="table-responsive">
-			<h3 class="showart" style=" font-weight: bold">Tous mes posts!!!
-			</h3>
-
-
-			<div class="d-flex align-items-center justify-content-between">
-
-
-				<div class="card-body">
+   <div class="row">
+    <div class="col-sm mx-4" STYLE="padding:15px">
+	<h3 style="text-align:center;" class="mt-5">Tous mes posts</h3>
+	
+	
+				<table class="table table-hover table-responsive mt-5">
 					{% if articles | length > 0 %}
-						{{ knp_pagination_render(articles) }}
-						<div class="table-responsive">
-
-							<table class="table table-hover">
-
-								<thead class="tete">
+						
+<a class="btn btn-sm btn-success mt-3" href="{{ path('create_article') }}">Creer un Post</a>
+								<thead>
 									<th>Date</th>
 									<th>titre de l'article</th>
 									<th>Contenu</th>
-
-									<th>action
-									</th>
+									<th>action</th>
 									<th>Supprimer</th>
+							
+							</thead>
 
-								</thead>
-							</thea<tbody>
 							{% for article in articles %}
 								<tr>
 									<td>{{ article.createdAt | date('d-m-Y') }}</td>
@@ -124,13 +47,23 @@
 									</td>
 								</tr>
 							{% endfor %}
-						</tbody>
-					</td>
-				</tbody>
-			</tr>
-		</td>
-	</tbody>
-</tr></table>{{ knp_pagination_render(articles) }}{% else %}{% if app.user %}
+						
+</table>
+
+
+<div class=" mt-5">
+{{ knp_pagination_render(articles) }}
+</div>
+{% else %}
+
+{% if app.user %}
 <p>Tu n'as pas encore écrit d'articles!</p>
+
 <a class="btn btn-sm btn-success mt-3" href="{{ path('create_article') }}">Creer un Post</a>{% else %}
-<p>Il faut se connecter pour créer un Post !!!</p>{% endif %}{% endif %}</div></div></div></div></div></aside></div>{% include "public/shared/_footer.html.twig" %}</body>{% endblock %}
+
+{% endif %}
+{% endif %}
+</div>
+</div>
+</div>
+{% endblock %}

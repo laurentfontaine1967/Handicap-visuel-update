@@ -1,9 +1,12 @@
 body{
     background: url("/..//images/home_braille.png") no-repeat top/cover;
-
 }
 
+a.page-link {
+    color:black !important;
+}
 
-
-
+span.page-link {
+   background-color: grey !important;
+}
 

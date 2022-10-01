@@ -2,8 +2,9 @@
 			{% if app.user %}
 				{% if app.user.roles[0] is same as "ROLE_ADMIN" %}
 					
-							<a class="btn btn-warning" aria-current="page" href=" {{ path('admin_home') }} ">
-								<i class="fas fa-user-shield"></i>Admin</a>
+			<a class="btn btn-warning btn-sm" aria-current="page" href=" {{ path('admin_home') }} "><i class="fas fa-user-shield"></i>Admin</a>					
+			 <a class="btn btn-light btn-sm" type="button" href="{{ path('mes-informations') }}" >Mon compte</a> 
+			 <a class="btn btn-dark btn-sm" type="button" href="{{ path('app_logout') }}" >Se Deconnecter</a> 
 
 				{% endif %}
 					{% endif %}
@@ -12,6 +13,18 @@
              <a class="btn btn-dark" type="button" href="{{ path('register') }}" >Creer un compte</a> 
              <a class="btn btn-dark" type="button" href="{{ path('app_login') }}">Se connecter</a> 
            {% endif %}
-			
-			
+
+	
+
+		   {% if app.user %}
+				{% if app.user.roles[0] is same as "ROLE_USER" %}
+		    <a style="padding:10px"> <i style="padding:8px"class="fa-solid fa-user"></i>{{app.user.pseudo}}</a>
+			 <a class="btn btn-light btn-sm" type="button" href="{{ path('mes-informations') }}" >Mon compte</a> 
+			 <a class="btn btn-dark btn-sm" type="button" href="{{ path('app_logout') }}" >Se Deconnecter</a> 
+            
+					{% endif %}
+				{% endif %}
+
+
+
 </nav>	
