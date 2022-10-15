@@ -2,8 +2,16 @@
 
 
 {% block body %}
-	<link rel="stylesheet" href="{{ asset('/css/news.css') }}">
-	{% include "public/shared/_side.html.twig" %}
+	{% include "public/shared/_side.html.twig" %} 
+<div class="container mt-5" >
+
+
+<div class="row mb-3">
+   <div class="col-sm mx-4">
+    {% include "public/shared/_navbar.html.twig" %} 
+   </div>
+   
+     </div>
 
 	<div class="container">
 
@@ -115,5 +123,5 @@
 
 	</div>
 
-	{% include "public/shared/_footer.html.twig" %}
+	
 {% endblock %}

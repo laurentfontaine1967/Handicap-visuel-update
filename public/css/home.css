@@ -1,5 +1,6 @@
 body{
-    background: url("/..//images/home_braille.png") no-repeat top/cover;
+    background: url("/..//images/home_braille.jpg") no-repeat top/cover;
+    background-color: rgba(0,0,255,0.3) ;
 }
 
 a.page-link {

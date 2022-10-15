@@ -16,7 +16,9 @@
      </div>
 
 <h3 style="text-align:center" class="mt-2">Vos partages </h3>
-
+<div>
+{% include "public/shared/_messages_flash.html.twig" %} 
+</div>
 
 {% if app.user %}
 {% if app.user.roles[0] is same as "ROLE_USER" %}

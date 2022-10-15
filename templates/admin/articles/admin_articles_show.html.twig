@@ -5,61 +5,24 @@
 
 {% block body %}
 
-	<link rel="stylesheet" href="{{ asset('/css/showarticles.css') }}">
+		{% include "public/shared/_side.html.twig" %}
+	<div class="container mt-5">
 
-	<body>
-		{% include "public/shared/_navbar.html.twig" %}
-		<div id="rowRegister" class="row">
+   <div class="row mb-3">
+   <div class="col-sm mx-4">
+    {% include "public/shared/_navbar.html.twig" %} 
+   </div>
+   
+     </div>	
 
-			<aside id="ou_intro_register" class="col-xl-3">
+	 <div class="container">
+<div class="row">
+<div class="col-sm">
 
-				<div class="intro_register">
-
-					<div class="sigle">
-						<P id="icocon">
-							<i class="fas fa-user-shield" style="color:red"></i>
-						</p>
-
-
-					</p>
-
-				</div>
-				<div class="infoRegister">
-					<h5>Menu Administrateur
-					</h5>
-
-					<a class="btn btn-primary" href="{{ path('admin_show_user') }}">Gestion des utilisateurs</a>
-					<p>
-						-des Utilisateurs inscrits
-
-					</p>
-					<a class="btn btn-success" href="{{ path('admin_show_article') }}">Gestion des Posts</a>
-					<p>
-
-						-des Posts
-					</p>
-				</div>
-
-				<img class="creat_account" src="{{ asset('images/cadenas.png') }}" alt="s'enregistrer"></img>
-		</div>
-	</body>
-</aside>
-
-
-<aside id="content" class="col-xl-9">
-	<div class="content_register">
-
-		<div class="row">
-			{% include "public/shared/_messages_flash.html.twig" %}
-		</div>
-
-		<div class="col-12">
-			<h3 class="showart" style=" font-weight:bold">Liste des Posts</h3>
-
-
-			<div class="card-body">
+<h3 class="showart" style=" font-weight:bold">Liste des Posts</h3>
+		
 				{% if articles | length > 0 %}
-					{{ knp_pagination_render(articles) }}
+				
 					<div class="table-responsive">
 
 						<table class="table table-hover">
@@ -94,11 +57,32 @@
 
 
 				</table>
-			</div>
+				</div>
+		
 
-			{{ knp_pagination_render(articles) }}
-		</div>
+			
+
+		
 	{% else %}
 		<p>Aucun Post écrit!</p>
 	{% endif %}
-</div></div></div></aside></div></body>{% endblock %}
+<div >
+{{ knp_pagination_render(articles) }}
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+
+	 </div>
+				
+
+
+		{# les post #}
+			
+{% endblock %}
