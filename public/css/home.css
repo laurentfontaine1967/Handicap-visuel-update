@@ -1,6 +1,7 @@
 body{
-    background: url("/..//images/home_braille.jpg") no-repeat top/cover;
-    background-color: rgba(0,0,255,0.3) ;
+    background: url("/..//images/home_braille.jpg") no-repeat top/cover; 
+    background-color:rgb(240, 234,231) ;
+     
 }
 
 a.page-link {
@@ -10,4 +11,77 @@ a.page-link {
 span.page-link {
    background-color: grey !important;
 }
+
+@media screen  and (max-width:700px) {
+
+
+#home{
+display:flex !important;
+flex-direction: column!important;
+justify-content: space-between !important;
+
+}
+
+#col1{
+    margin-bottom:  10px !important;
+}
+
+#col2{
+   
+    margin-top:  10px !important;
+}  
+
+
+#coll1{
+    margin-bottom:10px !important;
+    
+}
+
+#coll2{
+    margin-top:10px !important;
+    padding: 20px !important;
+}
+
+#coll3{
+    margin-bottom:10px !important;
+   
+}
+
+#coll4{
+    margin-top:10px !important;
+    padding: 20px !important;
+}
+
+#coll6{
+    margin-top:10px !important;
+    
+}
+
+#coll7{
+    margin-top:10px !important;
+    padding: 20px !important;
+    
+}
+#coll8{
+    margin-top:10px !important;
+    
+}
+#coll9{
+    margin-top:10px !important;
+    padding: 20px !important;
+    
+}
+#coll10{
+    margin-top:10px !important;
+    
+}
+#coll11{
+    margin-top:10px !important;
+    padding: 20px !important;
+   
+}
+
+}
+    
+
 

@@ -3,10 +3,10 @@
 
 {% block body %}
 	
-	{% include "public/shared/_side.html.twig" %}
-	<link rel="stylesheet" href="{{ asset('/css/home.css') }}">
 
-<div class="container mt-5 pb-5">
+	{% include "public/shared/_side.html.twig" %}
+	
+<div class="container mt-5 pb-5" >
 
 <div class="row mb-3">
    <div class="col-sm mx-4">
@@ -15,22 +15,22 @@
    
      </div>
 
-  <div class="row">
-    <div class="col-sm mx-3" STYLE="border:solid 2px grey;border-radius:5px;padding:10px">
+  <div  class="row" >
+    <div  id="coll6"class="col-sm mx-3" STYLE="border:solid 2px grey;border-radius:5px;padding:10px">
      
 <h5 style ="font-weight:bold;font-size:25px">Association Valentin Hauy ( A.V.H )</h5>
 
 <ul>
 	<li style="font-size:20px">Elle accueille les personnes en situation de handicap visuel et celles menacées par la malvoyance ou la cécité.</li>
    <li style="font-size:20px">Elle defend le droit des personnes en situation de handicap visuel</li>
-   <li style="font-size:20px">Elle prpose une bibliotheque braille,des livres parles,et egalement des fils audio-decrits.</li>
-   <li style="font-size:20px">Propose egalement des activites culturelles.</li>
+   <li style="font-size:20px">Elle propose une bibliotheque braille,des livres parlés,et également des fils audio-decrits.</li>
+   <li style="font-size:20px">Propose également des activités culturelles.</li>
 						
 </ul>						
 	</div>
 
 
-	<div class="col-sm mx-3" STYLE="border:solid 2px grey;border-radius:5px;display:flex;flex-direction:column;justify-content:space-around;align-item:center">					
+	<div id="coll7"class="col-sm mx-3" STYLE="border:solid 2px grey;border-radius:5px;display:flex;flex-direction:column;justify-content:space-around;align-item:center">					
 	<div style="text-align:center">
 	<img style="max-width:50%;text-align:center" src="{{ asset('images/Logo_Valentin_Haüy_assoss.png') }}" alt="logo association">
 	</div>
@@ -41,9 +41,9 @@
     </div>
 
  <div class="row mt-3">
-    <div class="col-sm mx-3" STYLE="border:solid 2px grey;border-radius:5px;padding:10px">
+    <div id="coll8"class="col-sm mx-3" STYLE="border:solid 2px grey;border-radius:5px;padding:10px">
      
-<h5 style ="font-weight:bold;font-size:25px">Union Nationale des Aveugles et Deficients visuels ( U.N.A.D.E.V )</h5>
+<h5 style ="font-weight:bold;font-size:25px">Union Nationale des Aveugles et Déficients visuels ( U.N.A.D.E.V )</h5>
 
 <p style="font-size:20px">Ses missions:</p>
 		
@@ -57,8 +57,8 @@
 	</div>
 
 
-	<div class="col-sm mx-3" STYLE="border:solid 2px grey;border-radius:5px;display:flex;flex-direction:column;justify-content:space-around;align-item:center">					
-	<div style="text-align:center">
+	<div  id="coll9"class="col-sm mx-3" STYLE="border:solid 2px grey;border-radius:5px;display:flex;flex-direction:column;justify-content:space-around;align-item:center">					
+	<div style="text-align:center;" >
 	<img style="max-width:50%;text-align:center" src="{{ asset('images/unadev_logo.jfif') }}" alt="logo association">
 	</div>
 	<div style="text-align:center">
@@ -68,8 +68,8 @@
     </div>
 
 
-<div class="row mt-3">
-    <div class="col-sm mx-3" STYLE="border:solid 2px grey;border-radius:5px;padding:10px">
+<div  class="row mt-3">
+    <div id="coll10"class="col-sm mx-3" STYLE="border:solid 2px grey;border-radius:5px;padding:10px">
      
 <h5 style ="font-weight:bold;font-size:25px">Fédération des Aveugles et Amblyopes de France</h5>
 
@@ -88,7 +88,7 @@
 	</div>
 
 
-	<div class="col-sm mx-3" STYLE="border:solid 2px grey;border-radius:5px;display:flex;flex-direction:column;justify-content:space-around;align-item:center">					
+	<div id="coll11"class="col-sm mx-3" STYLE="border:solid 2px grey;border-radius:5px;display:flex;flex-direction:column;justify-content:space-around;align-item:center">					
 	<div style="text-align:center">
 	<img style="max-width:50%;text-align:center" src="{{ asset('images/logoFédérationdes-aveuglesdefrance_miseenavant.jpg') }}" alt="logo association">
 	</div>
@@ -117,6 +117,6 @@
 
     
 </div>
-	
+
 
 {% endblock %}
