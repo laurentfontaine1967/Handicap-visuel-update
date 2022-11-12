@@ -1,112 +1,158 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}home{% endblock %}
+{% block title %}home
+{% endblock %}
 
 {% block body %}
-{% include "public/shared/_side.html.twig" %} 
+	{% include "public/shared/_side.html.twig" %}
 
-<div class="container">
-
-
-<div class="row mb-3">
-   <div class="col-sm mx-4">
-    {% include "public/shared/_navbar.html.twig" %} 
-   </div>
-   
-     </div>
+	<div class="container">
 
 
-  <div class="row">
+		<div class="row mb-3">
+			<div class="col-sm mx-4">
+				{% include "public/shared/_navbar.html.twig" %}
+			</div>
+
+		</div>
+
+		<!-- Popup -->
+
+		{# <div class="popup"> #}
+
+		<div class='modal' id='myModal' tabindex='-1' role='dialog' aria-labelledby='exampleModalCenterTitle' aria-hidden='true'>
+			<div class='modal-dialog modal-dialog-centered' role='document'>
+				<div class='modal-content'>
+					<div class='modal-header'>
+						<h5 class='modal-title' id='exampleModalCenterTitle'>Vous vivez à l'ile de la Reunion</h5>
+						<button type='button' class='close' data-bs-dismiss='modal' aria-label='Close'>
+							<span aria-hidden='true'>&times;</span>
+						</button>
+					</div>
+					<div class='modal-body'>
+						<p style='text-align:center'>
+							HANDITIC
+						</p>
 
 
+						<p style='text-align:center'>
+							Organisation à but non lucratif · Services aux handicapés</p>
+						<div style='text-align:center' class="mb-3">
+							<img src="{{ asset('images/handitic.jpeg') }} " style="max-width:60%" alt="logo handitic">
+						</div>
 
-{# col #}
-   <div id="col1"class="col-sm mx-5" style="border:solid 1px black; border-radius:5px;">
-      <h1 class="title mt-3">LE HANDICAP VISUEL</h1>
-     <p>Nous sommes démunis face au handicap visuel qui touche nos proches.</p>
-    
-     <ul> 
-     <li>Les organismes vers lesquels s’orienter?</li>
-     <li>Les associations .Solutions? Entraide? les aides possibles?</li>
-     <li>Ou se procurer du matériel adapté?</li>
-     <li>Un espace de partage et d'échange</li>
-     </ul>
-      </div>
+						<div style='text-align:center'>
+							<a href="https://www.facebook.com/HandiTIC/" target="_blank" class="btn btn-secondary">Suivre</a>
+						</div>
 
-{# col #}
+					</div>
+					<div
+						class='modal-footer'>{# <button type='button' class='btn btn-secondary' class="close" data-bs-dismiss='modal'>Close</button> #}
+					</div>
+				</div>
+			</div>
+		</div>
 
+		{# </div> #}
 
-
-
-  {# col #}
-   <div id="col2"class="col-sm mx-5" style="border:solid 1px black; border-radius:5px">
-       <h2>La MDPH </h2> 
-       <p> C'est la Maison Départementale pour les Personnes Handicapées, qui peut:</p>     
-       <ul> 
-     <li>Apporter une aide matérielle.</li>
-     <li>Proposer un placement en établissement spécialisé.</li>
-     <li>Intervenir en faveur de l’attribution d’une assistante de vie scolaire pour un jeune enfant.</li>
-       </ul>
-
-     <p><a class = "btn btn-primary btn-sm" href="https://fmh-association.org/services-2/ma-mdph/" target="_blank">  Trouver la MDPH de votre département</a></p>
-
-    </div>
-{# col #}
+		<!-- Popup -->
+		<div
+			class="row">
 
 
-  {# div row  #}  
-  </div>
-{# div row  #}
+			{# col #}
+			<div id="col1" class="col-sm mx-5" style="border:solid 1px black; border-radius:5px;">
+				<h1 class="title mt-3">LE HANDICAP VISUEL</h1>
+				<p>Nous sommes démunis face au handicap visuel qui touche nos proches.</p>
+
+				<ul>
+					<li>Les organismes vers lesquels s’orienter?</li>
+					<li>Les associations .Solutions? Entraide? les aides possibles?</li>
+					<li>Ou se procurer du matériel adapté?</li>
+					<li>Un espace de partage et d'échange</li>
+				</ul>
+			</div>
+
+			{# col #}
 
 
-<div class="row">
+			{# col #}
+			<div id="col2" class="col-sm mx-5" style="border:solid 1px black; border-radius:5px">
+				<h2>La MDPH
+				</h2>
+				<p>
+					C'est la Maison Départementale pour les Personnes Handicapées, qui peut:</p>
+				<ul>
+					<li>Apporter une aide matérielle.</li>
+					<li>Proposer un placement en établissement spécialisé.</li>
+					<li>Intervenir en faveur de l’attribution d’une assistante de vie scolaire pour un jeune enfant.</li>
+				</ul>
 
- <div class="col-sm mx-5  mt-5 " style="border:solid 1px black; border-radius:5px">
-      <h2> Les Bibliotheques sonores</h2>
-       
-          <p >Elles regroupent des milliers de livres audio classiques, récents et de quasiment tous les genres littéraires.Certaines bibliotheques sont meme gratuites !</p>
-        <p  style="padding-bottom:15px" > <a class="btn btn-primary btn-sm" href="https://lesbibliothequessonores.org/les-bibliotheques-sonores" target="_blank" class="btn btn-dark">Vers les bibliothèques Sonres</a></p>
-       
+				<p>
+					<a class="btn btn-primary btn-sm" href="https://fmh-association.org/services-2/ma-mdph/" target="_blank">
+						Trouver la MDPH de votre département</a>
+				</p>
 
-      </div>
-
-
- <div class="col-sm mx-5 mt-5" style="border:solid 1px black; border-radius:5px">
-      <h2>Se procurer du matériel adapté</h2> 
-      <p> Une liste de sites que nous vous proposons ... du materiel le plus simple au smartphones adaptés., en passant par les gadgets qui apportent une aide précieuse dans la vie de tous les jours.
-	    </p>
-    
-      <p  style="padding-bottom:15px" > <a  class="btn btn-primary btn-sm"  href="{{ path('commercant') }}" > Notre rubrique</a></p>
-      </div>
-
-
-
- {# div row 2 #}  
-  </div>
-{# div row 2 #}
+			</div>
+			{# col #}
 
 
-<div class="row">
- <div class="col mx-5 mt-5 ">
-       <p style="text-align:center;font-size:20px" class="mt-3"> Notre forum pour partager vos experiences, et pour s'entraider</p>
-        <p  style="padding-bottom:15px;text-align:center" > <a class="btn btn-success btn-sm" href="{{ path('show_articles') }}" >Notre forum</a></p>
-
-        </div>
+			{# div row  #}
+		</div>
+		{# div row  #}
 
 
+		<div class="row">
 
-{# div row 3#}  
-  </div>
-{# div row 3#}  
+			<div class="col-sm mx-5  mt-5 " style="border:solid 1px black; border-radius:5px">
+				<h2>
+					Les Bibliotheques sonores</h2>
+
+				<p>Elles regroupent des milliers de livres audio classiques, récents et de quasiment tous les genres littéraires.Certaines bibliotheques sont meme gratuites !</p>
+				<p style="padding-bottom:15px">
+					<a class="btn btn-primary btn-sm" href="https://lesbibliothequessonores.org/les-bibliotheques-sonores" target="_blank" class="btn btn-dark">Vers les bibliothèques Sonres</a>
+				</p>
 
 
+			</div>
 
 
+			<div class="col-sm mx-5 mt-5" style="border:solid 1px black; border-radius:5px">
+				<h2>Se procurer du matériel adapté</h2>
+				<p>
+					Une liste de sites que nous vous proposons ... du materiel le plus simple au smartphones adaptés., en passant par les gadgets qui apportent une aide précieuse dans la vie de tous les jours.
+				</p>
+
+				<p style="padding-bottom:15px">
+					<a class="btn btn-primary btn-sm" href="{{ path('commercant') }}">
+						Notre rubrique</a>
+				</p>
+			</div>
 
 
+			{# div row 2 #}
+		</div>
+		{# div row 2 #}
 
-{# div container   #}
-</div>
-{# div container   #}
+
+		<div class="row">
+			<div class="col mx-5 mt-5 ">
+				<p style="text-align:center;font-size:20px" class="mt-3">
+					Notre forum pour partager vos experiences, et pour s'entraider</p>
+				<p style="padding-bottom:15px;text-align:center">
+					<a class="btn btn-success btn-sm" href="{{ path('show_articles') }}">Notre forum</a>
+				</p>
+
+			</div>
+
+
+			{# div row 3#}
+		</div>
+		{# div row 3#}
+
+
+		{# div container   #}
+	</div>
+	{# div container   #}
 
 {% endblock %}
