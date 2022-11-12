@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e68c2b3079568785a4a202ed1d1a07c0",
+    "content-hash": "be9c72d3cd8b7340ffe1efde415c5222",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -8040,16 +8040,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v3.4.2",
+            "version": "v3.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "e07cdd3d430cd7e453c31b36eb5ad6c0c5e43077"
+                "reference": "c38fd6b0b7f370c198db91ffd02e23b517426b58"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/e07cdd3d430cd7e453c31b36eb5ad6c0c5e43077",
-                "reference": "e07cdd3d430cd7e453c31b36eb5ad6c0c5e43077",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/c38fd6b0b7f370c198db91ffd02e23b517426b58",
+                "reference": "c38fd6b0b7f370c198db91ffd02e23b517426b58",
                 "shasum": ""
             },
             "require": {
@@ -8100,7 +8100,7 @@
             ],
             "support": {
                 "issues": "https://github.com/twigphp/Twig/issues",
-                "source": "https://github.com/twigphp/Twig/tree/v3.4.2"
+                "source": "https://github.com/twigphp/Twig/tree/v3.4.3"
             },
             "funding": [
                 {
@@ -8112,7 +8112,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-08-12T06:47:24+00:00"
+            "time": "2022-09-28T08:42:51+00:00"
         },
         {
             "name": "webmozart/assert",

@@ -3,7 +3,6 @@
 	{
 		# here, define your CSS styles as usual #
 	}
-
 	.divText {
 		text-align: center;
 	}
@@ -15,7 +14,12 @@
 	<h6>
 		Bonjour,
 	</h6>
-
-
-	<p>Votre message</p>
+	<p>Nouveau message de :</p>
+	<p>{{ mail}}</p>
+	<p>Sujet du message: :</p>
+	<p>{{sujet}}</p>
+	<p>Voici son message:</p>
 	<p>{{message|raw}}</p>
+
+
+</div>

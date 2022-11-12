@@ -8,12 +8,20 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 
-class ContactType extends AbstractType
+class ContactTypeForm extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+        ->add('mail', EmailType::class, [
+            'label' => 'Entrer votre email',
+            'attr' => [
+                'placeholder' => 'Votre adresse mail...'
+            ],
+        ])
+       
         ->add('sujet', TextType::class, [
             'label' => 'Sujet du message',
             'attr' => [
