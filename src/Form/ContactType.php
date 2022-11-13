@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Form;
-
 use Symfony\Component\Form\AbstractType;
 use FOS\CKEditorBundle\Form\Type\CKEditorType;
 use Symfony\Component\Form\FormBuilderInterface;
